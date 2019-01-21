@@ -1,14 +1,14 @@
 package Com.Excute;
 
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.google.common.base.Verify;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -16,7 +16,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import Com.Pages.LoginPage;
 import Com.Pages.HomePageFirstSheet;
-import Com.Utility.Base_Tool;
+
 import Com.Utility.Config_data;
 
 @Listeners(Com.Utility.Listeners.class)
@@ -34,10 +34,10 @@ public class TestNg extends Base_Tool {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sandeep.mandhala\\Downloads\\All Jar files selenium\\chromedriver.exe");
 				driver =new ChromeDriver();
 				cong=new Config_data();
-				cong.conFig();
+				
 				
 				try {
-					driver.get(cong.getProperty("URL"));
+					driver.get(cong.getUrl());
 					logger.log(LogStatus.INFO, "Open Browser successfully");
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -108,8 +108,8 @@ Assert.assertEquals("Geography", raphy);
 	
 		
 		try {
-			LoginPage.userName(driver, cong.getProperty("username"));
-			LoginPage.passWord(driver, cong.getProperty("password"));
+			LoginPage.userName(driver, cong.getUsername());
+			LoginPage.passWord(driver, cong.getPassword());
 			LoginPage.Submit(driver);
 			logger.log(LogStatus.INFO, "Entered Password");
 		} catch (Exception e) {

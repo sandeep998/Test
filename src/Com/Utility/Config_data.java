@@ -13,16 +13,28 @@ public class Config_data {
 	FileInputStream fis;
 	Properties prop;
 	
-	public void conFig() throws Exception {
+	public Config_data() throws Exception {
 		
 		src = new File("C:\\Users\\sandeep.mandhala\\eclipse-workspace\\Tool_Tip\\src\\Com\\Utility\\config_file");
 		fis = new FileInputStream(src);
 		prop = new Properties();
 		prop.load(fis);
 	}
-	public String getProperty(String propKey) {
-		
-   return prop.getProperty(propKey);
+	public String getUrl() {
+		String url = prop.getProperty("URL");
+   return url;
+		 	
+	}
+	public String getUsername() {
+	String susername= prop.getProperty("username");
+	return susername;
+	
+		 	
+	}
+	public String getPassword() {
+	String spassword= prop.getProperty("password");
+	return spassword;
+	
 		 	
 	}
 }

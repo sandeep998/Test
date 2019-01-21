@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43169" started-at="2019-01-04T09:32:14Z" finished-at="2019-01-04T09:32:57Z">
+  <suite name="Default suite" duration-ms="45807" started-at="2019-01-21T11:55:03Z" finished-at="2019-01-21T11:55:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43169" started-at="2019-01-04T09:32:14Z" finished-at="2019-01-04T09:32:57Z">
+    <test name="Default test" duration-ms="45807" started-at="2019-01-21T11:55:03Z" finished-at="2019-01-21T11:55:49Z">
       <class name="Com.Excute.TestNg">
-        <test-method status="PASS" signature="launch_browser()[pri:0, instance:Com.Excute.TestNg@4d41cee]" name="launch_browser" is-config="true" duration-ms="8789" started-at="2019-01-04T09:32:14Z" finished-at="2019-01-04T09:32:22Z">
+        <test-method status="PASS" signature="launch_browser()[pri:0, instance:Com.Excute.TestNg@4d41cee]" name="launch_browser" is-config="true" duration-ms="11484" started-at="2019-01-21T11:55:03Z" finished-at="2019-01-21T11:55:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch_browser -->
-        <test-method status="PASS" signature="homeScreenTest()[pri:0, instance:Com.Excute.TestNg@4d41cee]" name="homeScreenTest" duration-ms="33426" started-at="2019-01-04T09:32:22Z" finished-at="2019-01-04T09:32:56Z">
+        <test-method status="PASS" signature="homeScreenTest()[pri:0, instance:Com.Excute.TestNg@4d41cee]" name="homeScreenTest" duration-ms="33254" started-at="2019-01-21T11:55:15Z" finished-at="2019-01-21T11:55:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homeScreenTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.Excute.TestNg@4d41cee]" name="tearDown" is-config="true" duration-ms="934" started-at="2019-01-04T09:32:56Z" finished-at="2019-01-04T09:32:57Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Com.Excute.TestNg@4d41cee]" name="tearDown" is-config="true" duration-ms="1019" started-at="2019-01-21T11:55:48Z" finished-at="2019-01-21T11:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

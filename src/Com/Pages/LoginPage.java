@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Com.Utility.Base_Tool;
 
-public class LoginPage extends Base_Tool{
+
+public class LoginPage extends Com.Excute.Base_Tool{
 	WebDriver driver;
 	
 	public static final By username=By.xpath("//input[@placeholder='Email']");
