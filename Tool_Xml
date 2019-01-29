@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" thread-count="3" >
+
+<test name="Tool_Tip">
+
+<classes>
+<class name="Com.Excute.TestNg">
+</class>
+</classes>
+</test>
+</suite>

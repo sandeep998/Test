@@ -1,5 +1,11 @@
 package Com.Excute;
 
+
+
+
+
+import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.testng.Assert;
@@ -34,7 +40,7 @@ public class TestNg extends Base_Tool {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sandeep.mandhala\\Downloads\\All Jar files selenium\\chromedriver.exe");
 				driver =new ChromeDriver();
 				cong=new Config_data();
-				
+			 
 				
 				try {
 					driver.get(cong.getUrl());
@@ -101,16 +107,24 @@ Assert.assertEquals("Geography", raphy);
 		/*HomePageFirstSheet home=PageFactory.initElements(driver, HomePageFirstSheet.class);
 		home.fillINPUTEmailAddress();*/
 	}
-	
-	
+	//random emain
+	public String randamsring() {
+		
+	String random=	RandomStringUtils.randomAlphabetic(8);
+	return (random);
+		
+	}
 	
   public  void loginScreenTest() {
+	String user=cong.getUsername();
+	String Pass=cong.getPassword();
+	LoginPage login =new LoginPage(driver);
 	
 		
 		try {
-			LoginPage.userName(driver, cong.getUsername());
-			LoginPage.passWord(driver, cong.getPassword());
-			LoginPage.Submit(driver);
+			login.userName(user);
+			login.passWord(Pass);
+			login.submit();
 			logger.log(LogStatus.INFO, "Entered Password");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

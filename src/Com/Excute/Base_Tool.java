@@ -23,7 +23,7 @@ public class Base_Tool {
 public static WebDriver driver;
 
 
-public static  WebElement visibilityOfElement(WebDriver driver,final By locator) {
+public static  WebElement visibilityOfElement(WebDriver driver,By locator) {
 	
 	WebDriverWait wait=new WebDriverWait(driver, 30);
 	return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));

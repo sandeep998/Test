@@ -1,38 +1,55 @@
 package Com.Pages;
 
-import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
 
 
 
 public class LoginPage extends Com.Excute.Base_Tool{
-	WebDriver driver;
+	static WebDriver driver;
 	
-	public static final By username=By.xpath("//input[@placeholder='Email']");
-	public static final By password=By.xpath("//input[@placeholder='Password']");
-	public static final By submit=By.xpath("//button[text()='Submit']");
+	//WebDriverWait wait;
+	
 	
 	public LoginPage(WebDriver driver) {
-		this.driver=driver;
-		
+	
+		LoginPage.driver=driver;
+		PageFactory.initElements(driver, this);
+		//wait=new WebDriverWait(driver, 30);
+			
+		}
+	
+	@FindBy(xpath="//input[@placeholder='Email']")
+	WebElement Tuser;
+	
+	public  void userName(String user1) {
+		//wait.until(ExpectedConditions.presenceOfElementLocated((By) Tuser));
+		//visibilityOfElement(driver,(By) Tuser);
+		Tuser.sendKeys(user1);
 	}
 	
-	public static void userName(WebDriver driver,String user) {
-		visibilityOfElement(driver, username);
-   WebElement usere=		driver.findElement(username);
-   usere.clear();
-   usere.sendKeys(user);
+	@FindBy(xpath="//input[@placeholder='Password']")
+	WebElement Tpassword;
+	
+	public  void passWord(String Pass1) {
+		
+		Tpassword.sendKeys(Pass1);
 	}
-	public static void passWord(WebDriver driver,String passsend) {
-		visibilityOfElement(driver, password);
-	WebElement pass=driver.findElement(password);
-	pass.clear();
-	pass.sendKeys(passsend);
+	
+	
+	@FindBy(xpath="//button[text()='Submit']")
+	WebElement Tsubmit;
+	
+	public  void submit() {
+		
+		Tsubmit.click();
 	}
-	public static void Submit(WebDriver driver) {
-	visibilityOfElement(driver, submit);
-	WebElement submit1=	driver.findElement(submit);
-	submit1.click();
-	}
+
 }

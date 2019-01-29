@@ -21,15 +21,15 @@ public class Config_data {
 		prop.load(fis);
 	}
 	public String getUrl() {
-		String url = prop.getProperty("URL");
-   return url;
+     String url = prop.getProperty("URL");
+     return url;
 		 	
 	}
 	public String getUsername() {
 	String susername= prop.getProperty("username");
 	return susername;
 	
-		 	
+		 	                                                                      
 	}
 	public String getPassword() {
 	String spassword= prop.getProperty("password");

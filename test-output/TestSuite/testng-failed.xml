@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
+  <test thread-count="3" name="Tool_Tip(failed)">
+    <classes>
+      <class name="Com.Excute.TestNg">
+        <methods>
+          <include name="homeScreenTest"/>
+          <include name="launch_browser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.Excute.TestNg -->
+    </classes>
+  </test> <!-- Tool_Tip(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
